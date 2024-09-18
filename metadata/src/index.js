@@ -18,7 +18,7 @@ async function startMicroservice(dbHost, dbName, rabbitHost, port) {
 
 
     //
-    // HTTP GET route to retrieve list of videos from the database.
+    // HTTP GET route to retrieve list of videos from the database
     //
     app.get("/videos", async (req, res) => {
         const videos = await videosCollection.find().toArray(); // In a real application this should be paginated.
